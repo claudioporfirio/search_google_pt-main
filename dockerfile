@@ -1,7 +1,5 @@
-FROM ubuntu/apache2
+FROM debian:latest
 
-WORKDIR E:\CURSO\SEGURANCA DE SOFTWARE\search_google_pt-main
+RUN apt-get update && apt-get upgrade -y
 
-COPY . .
-
-RUN index.php
+RUN apt-get install nginx -y
